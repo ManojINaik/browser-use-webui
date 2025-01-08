@@ -194,7 +194,7 @@ class CustomAgent(Agent):
             except json.JSONDecodeError as e:
                 logger.error(f"Failed to parse JSON: {str(e)}")
                 logger.error(f"Content was: {content}")
-                # Create a default response
+                # Create a default response with proper URL format
                 from .custom_views import CustomAgentBrain
                 return CustomAgentOutput(
                     current_state=CustomAgentBrain(
