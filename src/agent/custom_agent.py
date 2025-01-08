@@ -204,7 +204,7 @@ class CustomAgent(Agent):
                         thought="Failed to parse the response. Will retry with a simpler action.",
                         summary="Retry with simpler action"
                     ),
-                    action=[{"go_to_url": {"url": "https://www.google.com"}}]
+                    action=[{"go_to_url": {"url": "about:blank"}}]  # Use about:blank as a safe default
                 )
 
     @time_execution_async("--step")
